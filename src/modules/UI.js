@@ -1,41 +1,36 @@
 // UI class: Handles UI Task
+import Store from "./storage.js";
+
 export default class UI {
     static displayBooks() {
-      const books = store.getBooks();
+      const books = Store.getBooks();
       books.forEach((book) => UI.addBookToList(book));
     }
   
     static addBookToList(book) {
-      const list = document.querySelector('.booksList');
-      const section = document.createElement('section');
-      section.classList.add('list-holder');
-  
-      section.innerHTML = `<ul class="book-section">
-        <div class="book-caption">
-            <li class="title">"${book.title}"</li>
-            <li class="by">by</li>
-            <li class="author">${book.author}</li>
-            <li class="id">${book.id}</li>
-        </div>
-        <div>
-            <li>
-            <button class="del">Remove</button>
-            </li>
-        </div>
-    </ul>
-    `;
-      list.appendChild(section);
+      const list = document.querySelector('.ContentListBook');
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+      <td class="title">"${book.title}" </td>
+      <td class="author">"${book.author} </td>
+      <td class="id"> "${book.id}" </td>
+      <td> <button class="del">Remove</button> </td>
+      `;
+      list.appendChild(row);
     }
-  
+
     static deleteBook(el) {
       if (el.classList.contains('del')) {
-        el.parentElement.parentElement.parentElement.parentElement.remove();
+        el.parentElement.parentElement.remove();
       }
     }
   
+
+
     static clearFields() {
-      document.querySelector('#BookTitle').value = '';
-      document.querySelector('#BookAuthor').value = '';
+      document.querySelector('.title-Book').value = '';
+      document.querySelector('.Author-Book').value = '';
     }
   }
-  module.exports = UI;
+

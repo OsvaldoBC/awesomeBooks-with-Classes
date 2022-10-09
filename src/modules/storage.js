@@ -13,14 +13,14 @@ export default class Store {
     }
   
     static addBook(book) {
-      const books = store.getBooks();
+      const books = Store.getBooks();
   
       books.push(book);
       localStorage.setItem('books', JSON.stringify(books));
     }
   
     static removeBook(id) {
-      const books = store.getBooks();
+      const books = Store.getBooks();
   
       books.forEach((book, index) => {
         if (book.id === id) {
@@ -30,5 +30,3 @@ export default class Store {
       localStorage.setItem('books', JSON.stringify(books));
     }
   }
-
-  module.exports = Store;

@@ -1,36 +1,15 @@
-// Import modules
-
 // Book Class : Represent a Book
-import Book from './modules/addBook.js';
+import Book from './src/modules/addBook.js';
 
 // Store Class : Handles Storage
-import getBooks from './modules/storage.js';
+import Store from './src/modules/storage.js';
 
 // UI Class : Handle User Interfase Tasks
-import displayBooks from './src/modules/UI.js';
-
-
-const addBook = (book) => {
-  const books = getBooks();
-
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-};
-
-const removeBook = (id) => {
-  const books = getBooks();
-
-  books.forEach((book, index) => {
-    if (book.id === id) {
-      books.splice(index, 1);
-    }
-  });
-  localStorage.setItem('books', JSON.stringify(books));
-};
+import UI from './src/modules/UI.js';
 
 
 // Event: Display Books
-document.addEventListener('DOMContentLoaded', displayBooks());
+document.addEventListener('DOMContentLoaded', UI.displayBooks());
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -46,24 +25,24 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const book = new Book(title, author, id);
 
   // Add book to UI
-  addBookToList(book);
+  UI.addBookToList(book);
 
   // Add book to store
-  addBook(book);
+  Store.addBook(book);
 
   // Clear fields
-  clearFields();
+  UI.clearFields();
 });
 
 // Event: Remove a book
-document.querySelector('.booksList').addEventListener('click', (e) => {
+document.querySelector('.ContentListBook').addEventListener('click', (e) => {
   const id = document.querySelector('.id');
 
   // Remove book from UI
-  deleteBook(e.target);
+  UI.deleteBook(e.target);
 
   // Remove from store
-  removeBook(id.textContent);
+  Store.removeBook(id.textContent);
 });
 
 // Display date using Luxon
