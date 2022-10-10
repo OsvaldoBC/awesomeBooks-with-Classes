@@ -1,5 +1,5 @@
+// store class: Handles storage
 
-  // store class: Handles storage
 export default class Store {
     static getBooks() {
       let books;
@@ -21,6 +21,8 @@ export default class Store {
   
     static removeBook(id)  {
       const books = Store.getBooks();
+      console.log(id)
+      
 
       books.forEach((book, index) => {
         if (book.id === id) {

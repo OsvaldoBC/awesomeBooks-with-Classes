@@ -1,4 +1,5 @@
 // UI class: Handles UI Task
+
 import Store from "./storage.js";
 
 export default class UI {

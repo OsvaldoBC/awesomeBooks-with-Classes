@@ -7,6 +7,9 @@ import Store from './src/modules/storage.js';
 // UI Class : Handle User Interfase Tasks
 import UI from './src/modules/UI.js';
 
+// Luxon library
+import { DateTime } from './src/modules/luxon.js';
+
 
 // Event: Display Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks());
@@ -42,11 +45,11 @@ document.querySelector('.ContentListBook').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
 
   // Remove from store
-  Store.removeBook(id);
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
 
 // Display date using Luxon
-//document.getElementById('date-time').innerHTML = DateTime.now().toFormat('DDD t');
+document.getElementById('dateTime').innerHTML = DateTime.now().toFormat('DDD t');
 
 const list = document.getElementById('list');
 const book1 = document.getElementById('add-book');
