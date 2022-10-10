@@ -83,7 +83,6 @@ nav {
   display: flex;
   display: none;
   flex-direction: column;
-
 }
 
 .contact {
@@ -96,4 +95,16 @@ nav {
   text-align: end;
   margin-right: 200px;
   padding-top: 5px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.titleInput {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
 }

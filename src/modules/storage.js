@@ -19,16 +19,19 @@ export default class Store {
       localStorage.setItem('books', JSON.stringify(books));
     }
   
-    static removeBook(id)  {
+    static removeBook(id) {
       const books = Store.getBooks();
-      console.log(id)
-      
-
+  
       books.forEach((book, index) => {
+        id = id.replace('"', '');
+        id = id.replace('"', '');
+        id = id.replace(' ', '');
+        id = id.replace(' ', '');
         if (book.id === id) {
           books.splice(index, 1);
         }
       });
+      
       localStorage.setItem('books', JSON.stringify(books));
     }
   }
