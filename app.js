@@ -42,30 +42,30 @@ document.querySelector('.ContentListBook').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
 
   // Remove from store
-  Store.removeBook(id.textContent);
+  Store.removeBook(id);
 });
 
 // Display date using Luxon
-document.getElementById('date-time').innerHTML = DateTime.now().toFormat('DDD t');
+//document.getElementById('date-time').innerHTML = DateTime.now().toFormat('DDD t');
 
 const list = document.getElementById('list');
-const book1 = document.getElementById('book');
+const book1 = document.getElementById('add-book');
 const contact = document.getElementById('contact');
 
 list.addEventListener('click', () => {
-  document.querySelector('.card').style.display = 'flex';
-  document.querySelector('.dataForm').style.display = 'none';
+  document.querySelector('.listBook').style.display = 'flex';
+  document.querySelector('.inputData').style.display = 'none';
   document.querySelector('.contact').style.display = 'none';
 });
 
 book1.addEventListener('click', () => {
-  document.querySelector('.card').style.display = 'none';
-  document.querySelector('.dataForm').style.display = 'flex';
+  document.querySelector('.listBook').style.display = 'none';
+  document.querySelector('.inputData').style.display = 'flex';
   document.querySelector('.contact').style.display = 'none';
 });
 
 contact.addEventListener('click', () => {
-  document.querySelector('.card').style.display = 'none';
-  document.querySelector('.dataForm').style.display = 'none';
+  document.querySelector('.listBook').style.display = 'none';
+  document.querySelector('.inputData').style.display = 'none';
   document.querySelector('.contact').style.display = 'flex';
 });

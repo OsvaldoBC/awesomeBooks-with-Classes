@@ -26,8 +26,6 @@ export default class UI {
       }
     }
   
-
-
     static clearFields() {
       document.querySelector('.title-Book').value = '';
       document.querySelector('.Author-Book').value = '';

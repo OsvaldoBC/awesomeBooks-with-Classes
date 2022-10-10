@@ -19,9 +19,9 @@ export default class Store {
       localStorage.setItem('books', JSON.stringify(books));
     }
   
-    static removeBook(id) {
+    static removeBook(id)  {
       const books = Store.getBooks();
-  
+
       books.forEach((book, index) => {
         if (book.id === id) {
           books.splice(index, 1);
