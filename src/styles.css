@@ -76,12 +76,18 @@ nav {
 
 .listBook {
   display: flex;
+  flex-direction: column;
 }
 
 .inputData {
+  display: flex;
   display: none;
+  flex-direction: column;
+
 }
 
 .contact {
+  display: flex;
   display: none;
+  flex-direction: column;
 }
