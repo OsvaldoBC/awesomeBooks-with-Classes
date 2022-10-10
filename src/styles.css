@@ -16,10 +16,6 @@ nav {
   margin-left: 50px;
 }
 
-.link:hover {
-  color: rgb(96, 59, 231);
-}
-
 .mainCard {
   display: flex;
   flex-direction: column;
@@ -63,15 +59,15 @@ nav {
   color: black;
 }
 
+.link:hover {
+  color: rgb(96, 59, 231);
+}
+
 .lists {
   border-right: solid black 2px;
   margin-right: 10px;
   padding: 3px;
   padding-right: 10px;
-}
-
-.bookTable {
-  margin-top: 5px;
 }
 
 .listBook {

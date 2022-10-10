@@ -10,7 +10,6 @@ import UI from './src/modules/UI.js';
 // Luxon library
 import { DateTime } from './src/modules/luxon.js';
 
-
 // Event: Display Books
 document.addEventListener('DOMContentLoaded', UI.displayBooks());
 
@@ -45,7 +44,7 @@ document.querySelector('.ContentListBook').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
 
   // Remove from store
-  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  Store.removeBook(id.textContent);
 });
 
 // Display date using Luxon
