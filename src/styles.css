@@ -1,0 +1,106 @@
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+nav {
+  width: 80%;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bookTable {
+  border-color: blue;
+  border-style: solid;
+}
+
+.footer {
+  width: 80%;
+  margin-left: 50px;
+  border: solid;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+}
+
+.footer-p {
+  margin-left: 10px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: rgb(96, 59, 231);
+}
+
+.lists {
+  border-right: solid black 2px;
+  margin-right: 10px;
+  padding: 3px;
+  padding-right: 10px;
+}
+
+.listBook {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputData {
+  display: flex;
+  display: none;
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  display: none;
+  flex-direction: column;
+}
+
+.time {
+  text-align: end;
+  margin-right: 200px;
+  padding-top: 5px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.titleInput {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
